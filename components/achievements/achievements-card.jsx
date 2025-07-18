@@ -14,7 +14,7 @@ export default function AchievementsCard({ achievement }) {
             style={{ objectFit: "cover" }}
           />
         </div>
-        <h1 className="text-background font-bold tracking-wide text-justify text-sm lg:text-xl">
+        <h1 className="text-background font-bold tracking-wide text-justify text-sm lg:text-lg xl:text-xl">
           {achievement.title}
         </h1>
       </div>

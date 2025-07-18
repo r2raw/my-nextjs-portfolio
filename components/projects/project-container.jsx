@@ -10,7 +10,7 @@ export default function ProjectContainer({ selectedProject }) {
         description={selectedProject.description}
         techStack={selectedProject.techStack}
       />
-      <div className="col-span-2 relative">
+      <div className="col-span-2 relative overflow-hidden h-full">
         <ProjectSlider imgs={selectedProject.images} />
       </div>
     </>

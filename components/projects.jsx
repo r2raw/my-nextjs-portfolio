@@ -19,7 +19,7 @@ export default function ProjectsSection() {
     setSelectedIndex((prev) => prev + 1);
   };
   return (
-    <section className="py-40 pl-4 md:pl-10 lg:pl-20 relative w-full">
+    <section className="py-40 pl-4 md:pl-10 lg:pl-20 relative w-full min-h-dvh" id="projects">
       <h1 className=" -z-10 absolute text-6xl lg:text-[20rem] top-32 lg:top-10 font-bold opacity-10">
         PROJECTS
       </h1>

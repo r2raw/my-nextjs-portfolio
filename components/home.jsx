@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function HomeSection() {
   return (
-    <section className="flex h-dvh w-full justify-center items-center  relative">
+    <section id="home" className="flex  min-h-screen w-full justify-center items-center  relative">
       <div className="absolute -z-10 opacity-20 -top-50 left-0 w-full h-[130dvh] md:h-[120dvh]">
         <Image src={homeBg} alt="home-bg" fill style={{objectFit: 'cover'}}/>
       </div>
