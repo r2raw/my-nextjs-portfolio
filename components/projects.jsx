@@ -23,7 +23,7 @@ export default function ProjectsSection() {
       <h1 className=" -z-10 absolute text-6xl lg:text-[20rem] top-32 lg:top-10 font-bold opacity-10">
         PROJECTS
       </h1>
-      <div className="grid grid-cols-3 items-center justify-between w-full">
+      <div className="grid grid-cols-2 lg:grid-cols-3 items-center justify-between w-full">
         <div className="font-bold text-lg md:text-2xl">
           <button className="cursor-pointer hover:text-white/10 hover:scale-150" onClick={handlePrevButton}>
             &lt;
@@ -31,9 +31,9 @@ export default function ProjectsSection() {
           {selectedIndex + 1} of {projectsData.length}{" "}
           <button className="cursor-pointer hover:text-white/10 hover:scale-150" onClick={handleNextButton}>&gt;</button>
         </div>
-        <hr className=" col-span-2 justify-between" />
+        <hr className=" lg:col-span-2 justify-between" />
       </div>
-      <div className=" grid grid-cols-3 mt-10 ">
+      <div className=" grid grid-cols-2 lg:grid-cols-3 mt-10 gap-4 ">
         <ProjectContainer selectedProject={projectsData[selectedIndex]} />
       </div>
     </section>

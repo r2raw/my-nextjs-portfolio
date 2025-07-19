@@ -56,7 +56,7 @@ const robotSkillsData = {
   id: "1",
   title: "Vex High Stakes - Robot Skills Champion",
   thumbnail: robotSkills1,
-  description: "",
+  description: "At the VEX Robotics National Tournament, our team demonstrated exceptional skill and strategy, earning us a spot in the VEX World Robotics Competition in May 2025, held in Dallas, Texas. We proudly became the VEX High Stakes - Robot Skills Champion, showcasing our robot's precision and versatility. Additionally, we were named VEX High Stakes - Tournament Finalist, a testament to our consistent performance and teamwork throughout the competition. This achievement marked a significant milestone in our robotics journey, propelling us onto the global stage and preparing us for the exciting challenges ahead in the World Competition.",
   images: [
     robotSkills1,
     robotSkills2,
@@ -72,7 +72,7 @@ const overUnderData = {
   id: "2",
   title: "Vex Over Under - Tournament Finalist",
   thumbnail: overunder1,
-  description: "",
+  description: "In our very first attempt at the VEX Robotics Competition 2024, QCU VEX Robotics achieved incredible success, securing the 1st Runner-Up position at the VEX Robotics Philippine National Championship. As one of the team’s Programmer, I was responsible for designing and refining the robot’s program, ensuring peak performance during matches. Our hard work paid off with not only a Tournament Finalist and Judges Award but also the prestigious Sportsmanship Award, highlighting our teamwork and respect for the competition. This experience was a valuable opportunity to apply my skills in a real-world setting, and it reinforced my passion for robotics and problem-solving.",
   images: [
     overunder1,
     overunder2,
@@ -86,8 +86,8 @@ const overUnderData = {
 
 const tournament1Data = {
   id: "3",
-  title: "Vex High Stakes - Tournament 1 Finalist",
-  description: "",
+  title: "Vex High Stakes - Tournament 1 Champion",
+  description: "In our second season, we participated in the VEX High Stakes Tournament, where we emerged as the Tournament 1 Champion, marking a major milestone in our journey towards the nationals. This victory was a result of our team's growth, with each member contributing their expertise to improve both the robot's performance and our overall strategy. As the Programmer, I focused on optimizing the code for precision and efficiency, which played a crucial role in our success. Winning this tournament not only earned us a spot in the upcoming nationals but also boosted our confidence as we prepared for the next phase of the competition.",
   thumbnail: tournament11,
   images: [
     tournament11,
@@ -102,8 +102,8 @@ const tournament1Data = {
 
 const tournament2Data = {
   id: "4",
-  title: "Vex High Stakes - Tournament 2 Finalist",
-  description: "",
+  title: "Vex High Stakes - Tournament 2 Champion",
+  description: "After our victory at VEX High Stakes - Tournament 1 Champion, we continued our strong performance in Tournament 2, where we once again claimed the title of VEX High Stakes - Tournament 2 Champion, solidifying our qualification for the national tournament. This back-to-back success was a testament to our team's dedication and improvement. As the Programmer, I continued refining the robot’s software, ensuring that we maintained precision and adaptability under pressure. With two tournament wins, we not only earned our spot at the nationals but also gained valuable experience that will help us compete at the highest level.",
   thumbnail: tournament21,
   images: [
     tournament21,
@@ -119,7 +119,7 @@ const tournament2Data = {
 const chedUnifastData = {
   id: "5",
   title: "CHED UniFAST - Academic Excellence Award",
-  description: "",
+  description: "In recognition of our outstanding achievements in robotics and academic performance, CHED NCR honored us with the CHED UniFAST - Academic Excellence Award. This prestigious award not only acknowledged our success in the VEX Robotics Competitions but also celebrated the efforts of Quezon City University as a local institution making significant strides in technology and innovation. Balancing rigorous academics with our passion for robotics, this recognition underscored our team’s dedication to excellence in both the classroom and the competition field. Receiving the award was a proud moment for us, showcasing that hard work and perseverance can lead to meaningful accomplishments, regardless of size or scale.",
   thumbnail: ched1,
   images: [ched1, ched2, ched3, ched4, ched5, ched6, ched7],
 };
@@ -127,7 +127,7 @@ const chedUnifastData = {
 const dallasTexasData = {
   id: "6",
   title: "QCU Robotics From Local to Global",
-  description: "",
+  description: "In just one year since our formation, QCU Robotics embarked on an incredible journey from local competitions to the VEX World Robotics Competition, marking our first international venture. It was a monumental experience, as we represented not only Quezon City University but also the Philippines on a global stage. Although we finished in the Top 15 for Robot Skills, the experience was invaluable. Competing against some of the brightest minds and most innovative teams from around the world, we gained insights that fueled our growth. For a team still finding its footing, qualifying for and participating in such a prestigious event was a remarkable achievement, setting the stage for future success and solidifying our global ambitions.",
   thumbnail: dallas1,
   images: [dallas1, dallas2, dallas3, dallas4, dallas5, dallas6, dallas7],
 };
@@ -135,7 +135,7 @@ const dallasTexasData = {
 const performaceAwardData = {
   id: "7",
   title: "QCU Exemplary Performance Award",
-  description: "",
+  description: "At our school’s Recognition Day, I, along with another team member, was honored with the QCU Exemplary Performance Award in recognition of our outstanding contributions to the QCU VEX Robotics team. This award celebrated not only our technical expertise and dedication to robotics but also our leadership, teamwork, and perseverance throughout our journey, both locally and internationally. As graduating members, this recognition was a proud moment, symbolizing our commitment and the impact we made in representing Quezon City University on the global stage. It was an unforgettable way to close this chapter, knowing that our achievements will continue to inspire future generations of robotics enthusiasts at the university.",
   thumbnail: performance1,
   images: [
     performance1,

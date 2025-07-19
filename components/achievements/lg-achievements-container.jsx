@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import AchievementList from "./achivements-list";
 import achievementsData from "../../data/achievements-data";
+import Link from "next/link";
 export default function LgAchievementsContainer({ currScreen }) {
   return (
     <>
@@ -20,9 +21,9 @@ export default function LgAchievementsContainer({ currScreen }) {
             {achievementsData[0].title}
           </h1>
         </div>
-        <button className="bg-background tracking-wide text-sm md:text-base md:tracking-widest rounded-4xl md:py-1 cursor-pointer border border-background transition-colors duration-500 hover:bg-white hover:text-background ease-in">
+        <Link href={`achievements/${achievementsData[0].id}`} className="bg-background text-center tracking-wide text-sm md:text-base md:tracking-widest rounded-4xl md:py-1 cursor-pointer border border-background transition-colors duration-500 hover:bg-white hover:text-background ease-in">
           Read more...
-        </button>
+        </Link>
       </div>
       <AchievementList
         achievements={achievementsData}

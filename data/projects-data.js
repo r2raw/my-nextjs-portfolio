@@ -18,7 +18,7 @@ import wordOfHope5 from "../assets/projects/word-of-hope/Messenger_creation_0A88
 const kalakalikasanWebData = {
   id: "1",
   title: "KalaKalikasan (Website)",
-  description: "",
+  description: "This is built for KalaKalikasan Admin Panel which is a powerful web application built to manage the backend of the KalaKalikasan waste management platform. Developed using Firebase, Node.js, ExpressJS, React, Redux, Tanstack Query, and Tailwind CSS, it provides admins with full control over the system. Key features include approving store owners’ points conversion into real money, approving store registrations, tracking user activities, and a forecasting tool for predicting monthly expenses to ensure financial preparedness. The admin can also oversee waste collection data, helping to streamline operations and maintain a sustainable ecosystem.",
   techstack: [],
   images: [
     kalakakilasanWeb1,
@@ -32,7 +32,7 @@ const kalakalikasanWebData = {
 const kalakalikasanMobileData = {
   id: "2",
   title: "KalaKalikasan (Mobile)",
-  description: "",
+  description: "The KalaKalikasan Mobile App enables users to participate in the waste management ecosystem by earning points through the reversed vending machine, where they can recycle items and receive rewards. Built with Flutter, Node.js, and Firebase, the app integrates seamlessly with the centralized server, offering real-time synchronization with the website. Users can register stores, list their products, and earn points, which can later be converted into real money. This functionality allows store owners to request point-to-cash conversions through the admin portal, streamlining transactions for greater user engagement and incentivizing recycling efforts.",
   techstack: [],
   images: [
     kalakalikasanMobile1,
@@ -46,7 +46,8 @@ const kalakalikasanMobileData = {
 const wordOfHopeData = {
   id: "3",
   title: "Word Of Hope",
-  description: "",
+  description:
+    "The Hospital Management System is a comprehensive web solution that streamlines hospital operations. Built with PostgreSQL, Node.js, ExpressJS, and ReactJS, it offers features like RFID-based attendance management for staff, QR scanning for patient appointments, and automated printing of patient results. This system integrates cutting-edge technology to enhance administrative efficiency, improve patient experience, and ensure accurate record-keeping within healthcare facilities.",
   techstack: [],
   images: [wordOfHope1, wordOfHope2, wordOfHope3, wordOfHope4, wordOfHope5],
 };

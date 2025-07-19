@@ -10,7 +10,6 @@ import ContactsSection from "../../components/contacts";
 export default function Home() {
   return (
     <>
-      <MainNav />
       <main>
         <HomeSection />
         <SkillsSection />
