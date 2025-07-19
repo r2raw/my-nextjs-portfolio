@@ -11,7 +11,7 @@ export default function SkillCard({ title, images }) {
     }}
     initial="hidden"
     animate={'visible'}
-    transition={{duration: 0.5, type:'spring', stiffness: 100}}
+    transition={{duration: 0.5, type:'tween'}}
     viewport={{once: true, amount: 0.3}}
      className="relative bg-white rounded-4xl px-8">
       <div className="absolute w-3/4 translate-x-1/2 right-1/2  text-center text-background border-2 border-background rounded-2xl px-2 py-2 font-bold -translate-y-1/2 bg-white">

@@ -61,8 +61,8 @@ function HomeSection() {
             hidden: { opacity: 0, scale: 0 },
             visible: { opacity: 100, scale: 1 },
           }}
-          href="/FULL STACK PROGRAMMER-RESUMME-MARTE.pdf"
-          download="FULL STACK PROGRAMMER-RESUMME-MARTE.pdf"
+          href="/FULL-STACK-PROGRAMMER-APPLICATION-MARTE.pdf"
+          target="_blank"
           initial={"hidden"}
           animate={"visible"}
           exit={"hidden"}

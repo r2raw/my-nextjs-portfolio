@@ -16,7 +16,7 @@ export default function LgAchievementsContainer({ currScreen }) {
           }}
           initial={"hidden"}
           animate={"visible"}
-          transition={{ duration: 0.2, stiffness: 100, type: "spring" }}
+          transition={{ duration: 0.2, stiffness: 100, type: "tween" }}
           className=" flex flex-col gap-4"
         >
           <div className="relative w-full h-40 md:h-52 lg:h-60">

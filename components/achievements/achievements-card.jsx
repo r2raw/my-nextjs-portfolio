@@ -14,7 +14,7 @@ export default function AchievementsCard({ achievement }) {
         }}
         initial={'hidden'}
         animate={'visible'}
-        transition={{ duration: 0.5, stiffness: 100, type: "spring" }}
+        transition={{ duration: 0.5, stiffness: 100, type: 'tween' }}
         className="bg-white rounded-2xl flex flex-col gap-4 justify-between h-full p-2"
       >
         <div className="flex flex-col gap-4">
