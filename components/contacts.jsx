@@ -9,7 +9,7 @@ export default function ContactsSection() {
       id="contacts"
       className=" py-40 px-20 flex flex-col items-center justify-center"
     >
-      <div className="w-1/3 flex flex-col gap-8">
+      <div className="lg:w-1/3 flex flex-col gap-8">
         <h1 className="text-center text-5xl">GET IN TOUCH</h1>
         <p className="text-center">
           I love to hear what people have to say. If you have any questions or

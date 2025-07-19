@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import AchievementsCard from "./achievements-card";
 import useCurrentWidth from "../../hooks/useCurrentWidth";
+import { AnimatePresence, delay, motion, scale, stagger } from "framer-motion";
 
 export default function AchievementList({ achievements }) {
   const currentWidth = useCurrentWidth();
@@ -10,7 +11,7 @@ export default function AchievementList({ achievements }) {
   let pageCount = achievements.length;
 
   useEffect(() => {
-    if (currentWidth === "md" || currentWidth == 'sm') {
+    if (currentWidth === "md" || currentWidth == "sm") {
       const intervalId = setInterval(() => {
         handleNextPage();
         console.log(`Page Count: ${pageCount}`);
@@ -36,7 +37,12 @@ export default function AchievementList({ achievements }) {
   ));
 
   if (currentWidth == "sm") {
-    currentAchievementDisplay = <AchievementsCard key={achievements[selectedIndex].id} achievement={achievements[selectedIndex]} />;
+    currentAchievementDisplay = (
+      <AchievementsCard
+        key={achievements[selectedIndex].id}
+        achievement={achievements[selectedIndex]}
+      />
+    );
   }
 
   const handleNextPage = () => {
@@ -53,19 +59,41 @@ export default function AchievementList({ achievements }) {
   };
   return (
     <>
-      <div className={classes}>
+      <div
+        className={classes}
+      >
         {currentAchievementDisplay}
-        <div className="w-full flex justify-center items-center md:col-span-2 gap-2 mt-4 lg:hidden">
+        <motion.div
+          variants={{
+            visible: {
+              transition: { delayChildren: stagger(1, { startDelay: 1 }) },
+            },
+          }}
+          className="w-full flex justify-center items-center md:col-span-2 gap-2 mt-4 lg:hidden"
+        >
           {Array.from({ length: pageCount }).map((_, i) => (
-            <button
+            <motion.button
               key={i}
-              className={`h-4 w-4 ${selectedIndex == i ? 'bg-white/30' : 'bg-white'} rounded-full cursor-pointer`}
+              variants={{
+                hidden: { opacity: 0, scale: 0.5 },
+                visible: { opacity: 1, scale: 1 },
+              }}
+              initial={"hidden"}
+              animate={"visible"}
+              exit={"visible"}
+              whileInView={"visible"}
+              transition={{
+                type: "spring",
+              }}
+              className={`h-4 w-4 ${
+                selectedIndex == i ? "bg-white/30" : "bg-white"
+              } rounded-full cursor-pointer`}
               onClick={() => {
                 handleClick(i);
               }}
-            ></button>
+            ></motion.button>
           ))}
-        </div>
+        </motion.div>
       </div>
     </>
   );
