@@ -3,7 +3,8 @@ import React, { useState, useEffect } from "react";
 import IconButton from "@mui/material/IconButton";
 import MenuSharpIcon from "@mui/icons-material/MenuSharp";
 import CloseSharpIcon from "@mui/icons-material/CloseSharp";
-import Link from "next/link";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Link as ScrollLink } from "react-scroll";
 const navItems = [
   { label: "HOME", id: "home" },
   { label: "SKILLS", id: "skills" },
@@ -15,6 +16,10 @@ const navItems = [
 
 export default function MainNav() {
   const [openNav, setOpenNav] = useState(false);
+  const { scrollY } = useScroll();
+  console.log(scrollY)
+
+  const colorNav = useTransform(scrollY, [700,2000], ['', '#0b0c5d']);
   const handleClose = () => {
     setOpenNav(false);
   };
@@ -35,28 +40,46 @@ export default function MainNav() {
           <ul className="flex flex-col gap-4 py-16 px-8 bg-background  h-dvh shadow-2xl">
             {navItems.map((item) => (
               <li key={item.id} className="w-full">
-                <Link
-                  href={`/#${item.id}`}
-                  className="font-bold tracking-widest text-center hover:text-white/50"
+                <ScrollLink
+                  to={item.id}
+                  spy={true}
+                  smooth={true}
+                  hashSpy={true}
+                  offset={0}
+                  duration={500}
+                  activeClass=" text-white/50"
+                  className="font-bold tracking-widest text-center cursor-pointer hover:text-white/50"
                 >
                   {item.label}
-                </Link>
+                </ScrollLink>
               </li>
             ))}
           </ul>
         )}
       </nav>
-      <nav className=" hidden lg:flex items-center justify-end px-4 py-8">
+      <motion.nav
+        style={{ backgroundColor: colorNav }}
+        className=" hidden lg:flex items-center justify-end px-4 py-8"
+      >
         <ul className="flex gap-4">
           {navItems.map((item) => (
             <li key={item.id}>
-              <Link href={`/#${item.id}`} className="font-bold tracking-widest hover:text-white/50">
+              <ScrollLink
+                to={item.id}
+                spy={true}
+                smooth={true}
+                hashSpy={true}
+                offset={0}
+                duration={500}
+                className="font-bold tracking-widest hover:text-white/50 cursor-pointer"
+                activeClass=" text-white/50"
+              >
                 {item.label}
-              </Link>
+              </ScrollLink>
             </li>
           ))}
         </ul>
-      </nav>
+      </motion.nav>
     </header>
   );
 }

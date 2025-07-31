@@ -7,7 +7,7 @@ export default function ContactsSection() {
   return (
     <section
       id="contacts"
-      className=" py-40 px-20 flex flex-col items-center justify-center"
+      className=" h-dvh py-40 px-20 flex flex-col items-center justify-center"
     >
       <div className="lg:w-1/3 flex flex-col gap-8">
         <h1 className="text-center text-5xl">GET IN TOUCH</h1>
