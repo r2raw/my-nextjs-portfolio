@@ -5,6 +5,8 @@ import MenuSharpIcon from "@mui/icons-material/MenuSharp";
 import CloseSharpIcon from "@mui/icons-material/CloseSharp";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 const navItems = [
   { label: "HOME", id: "home" },
   { label: "SKILLS", id: "skills" },
@@ -17,15 +19,19 @@ const navItems = [
 export default function MainNav() {
   const [openNav, setOpenNav] = useState(false);
   const { scrollY } = useScroll();
-  console.log(scrollY)
+  const location = usePathname();
 
-  const colorNav = useTransform(scrollY, [700,2000], ['', '#0b0c5d']);
+  const isIndex = location === "/";
+
+  const colorNav = useTransform(scrollY, [700, 2000], ["", "#0b0c5d"]);
   const handleClose = () => {
     setOpenNav(false);
   };
   const handleOpen = () => {
     setOpenNav(true);
   };
+
+  useEffect(() => handleClose(), [location]);
 
   return (
     <header className="fixed w-full top-0 left-0 z-50">
@@ -40,18 +46,28 @@ export default function MainNav() {
           <ul className="flex flex-col gap-4 py-16 px-8 bg-background  h-dvh shadow-2xl">
             {navItems.map((item) => (
               <li key={item.id} className="w-full">
-                <ScrollLink
-                  to={item.id}
-                  spy={true}
-                  smooth={true}
-                  hashSpy={true}
-                  offset={0}
-                  duration={500}
-                  activeClass=" text-white/50"
-                  className="font-bold tracking-widest text-center cursor-pointer hover:text-white/50"
-                >
-                  {item.label}
-                </ScrollLink>
+                {isIndex ? (
+                  <ScrollLink
+                    to={item.id}
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    offset={0}
+                    duration={500}
+                    activeClass=" text-white/50"
+                    onClick={handleClose}
+                    className="font-bold tracking-widest text-center cursor-pointer hover:text-white/50"
+                  >
+                    {item.label}
+                  </ScrollLink>
+                ) : (
+                  <Link
+                    className="font-bold tracking-widest text-center cursor-pointer hover:text-white/50"
+                    href={`/#${item.id}`}
+                  >
+                    {item.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
@@ -64,18 +80,27 @@ export default function MainNav() {
         <ul className="flex gap-4">
           {navItems.map((item) => (
             <li key={item.id}>
-              <ScrollLink
-                to={item.id}
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                offset={0}
-                duration={500}
-                className="font-bold tracking-widest hover:text-white/50 cursor-pointer"
-                activeClass=" text-white/50"
-              >
-                {item.label}
-              </ScrollLink>
+              {isIndex ? (
+                <ScrollLink
+                  to={item.id}
+                  spy={true}
+                  smooth={true}
+                  hashSpy={true}
+                  offset={0}
+                  duration={500}
+                  className="font-bold tracking-widest hover:text-white/50 cursor-pointer"
+                  activeClass=" text-white/50"
+                >
+                  {item.label}
+                </ScrollLink>
+              ) : (
+                <Link
+                  className="font-bold tracking-widest hover:text-white/50 cursor-pointer active:text-white/50"
+                  href={`/#${item.id}`}
+                >
+                  {item.label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>

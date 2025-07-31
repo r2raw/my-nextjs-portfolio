@@ -30,7 +30,7 @@ export default function ContactsSection() {
           <a href="https://www.facebook.com/xpayatx/" target="_blank" className="hover:text-white/30">
             <FacebookIcon sx={{ fontSize: 60 }} />
           </a>
-          <a href="www.linkedin.com/in/marte-jr-ii-arturo-d-631a70248" className="hover:text-white/30">
+          <a href="https://www.linkedin.com/in/marte-jr-ii-arturo-d-631a70248" className="hover:text-white/30">
             <LinkedInIcon sx={{ fontSize: 60 }} />
           </a>
         </div>
